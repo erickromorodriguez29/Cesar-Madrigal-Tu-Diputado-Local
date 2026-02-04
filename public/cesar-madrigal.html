@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>César Madrigal | Diputado Local Jalisco - PAN</title>
+    <meta name="description" content="Biografía oficial de César Octavio Madrigal Díaz, Diputado Local del Congreso de Jalisco por el Distrito 8 de Guadalajara. Partido Acción Nacional.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --pan-blue: #003A8F;
+            --pan-blue-dark: #002a6b;
+            --pan-blue-light: #0056B8;
+            --pan-white: #ffffff;
+            --pan-accent: #0056B8;
+            --pan-soft: #E6F0FF;
+            --pan-gray: #f8f9fa;
+            --pan-gray-dark: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Navbar */
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--pan-blue) 0%, var(--pan-blue-dark) 100%);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-custom.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 20px rgba(0, 40, 85, 0.3);
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--pan-white) !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--pan-white);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--pan-blue) 0%, var(--pan-blue-dark) 50%, var(--pan-blue-light) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           background: url('imagenes/portadacongreso.jpeg') center/cover no-repeat;
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+
+      
+        @keyframes moveBackground {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(50px) translateY(50px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-photo-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--pan-white);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 10px var(--pan-accent);
+            animation: float 6s ease-in-out infinite;
+            background: linear-gradient(135deg, #ccc 0%, #999 100%);
+        }
+        
+        .hero-photo-placeholder {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid var(--pan-white);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 10px var(--pan-accent);
+            animation: float 6s ease-in-out infinite;
+            background: linear-gradient(135deg, var(--pan-blue-light) 0%, var(--pan-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pan-white);
+            font-size: 5rem;
+            overflow: hidden; /* 🔥 CLAVE para recortar en círculo */
+    
+        }
+
+        /* ESTO ES LO QUE FALTA */
+        .hero-photo-placeholder img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           border-radius: 50%;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--pan-white);
+            color: var(--pan-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(0, 58, 143, 0.3);
+        }
+        
+        .hero-title {
+            color: var(--pan-white);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            color: var(--pan-soft);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pan-white);
+            display: block;
+            line-height: 1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-number .counter-suffix {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--pan-white);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        /* Section Styles */
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--pan-blue);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--pan-accent);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            color: var(--pan-gray-dark);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: var(--pan-white);
+        }
+        
+        .about-card {
+            background: var(--pan-gray);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 58, 143, 0.15);
+            border-color: var(--pan-accent);
+        }
+        
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--pan-blue) 0%, var(--pan-blue-light) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pan-white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Education Section */
+        .education-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--pan-blue) 0%, var(--pan-blue-dark) 100%);
+            color: var(--pan-white);
+        }
+        
+        .education-section .section-title {
+            color: var(--pan-white);
+        }
+        
+        .education-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .education-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .education-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.02);
+        }
+        
+        .education-year {
+            background: var(--pan-white);
+            color: var(--pan-blue);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .education-icon {
+            font-size: 3rem;
+            color: var(--pan-soft);
+            margin-bottom: 1rem;
+        }
+        
+        .doctorate-badge {
+            background: linear-gradient(135deg, var(--pan-accent) 0%, var(--pan-blue-light) 100%);
+            color: var(--pan-white);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 86, 184, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(0, 86, 184, 0); }
+        }
+        
+        /* Timeline Section */
+        .timeline-section {
+            padding: 100px 0;
+            background: var(--pan-gray);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--pan-blue), var(--pan-accent), var(--pan-blue-light));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            margin-right: calc(50% + 30px);
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: calc(50% + 30px);
+        }
+        
+        .timeline-content {
+            width: calc(50% - 60px);
+            background: var(--pan-white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 40, 85, 0.15);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--pan-white);
+            border: 4px solid var(--pan-blue);
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px var(--pan-soft);
+        }
+        
+        .timeline-year {
+            background: var(--pan-blue);
+            color: var(--pan-white);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-title {
+            color: var(--pan-blue);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .timeline-title:hover {
+            color: var(--pan-accent);
+            transform: translateX(5px);
+        }
+        
+        .timeline-title::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--pan-accent);
+            transition: width 0.3s ease;
+        }
+        
+        .timeline-title:hover::before {
+            width: 100%;
+        }
+        
+        .timeline-subtitle {
+            color: var(--pan-accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .timeline-image-placeholder {
+            width: 100%;
+            height: 320px;
+            background: var(--pan-soft);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: none;
+            opacity: 0.3;
+        }
+        
+        .timeline-image-placeholder i {
+            font-size: 1.5rem;
+            color: var(--pan-blue);
+            margin-bottom: 0.3rem;
+        }
+        
+        .timeline-image-placeholder span {
+            font-size: 0.7rem;
+            color: var(--pan-blue);
+        }
+
+
+        .timeline-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0; /* 🔥 quita espacio extra */
+
+}
+
+
+        
+        /* Projects Section */
+        .projects-section {
+            padding: 100px 0;
+            background: var(--pan-white);
+        }
+        
+        .project-card {
+            background: var(--pan-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 40, 85, 0.2);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--pan-blue) 0%, var(--pan-blue-light) 100%);
+            padding: 1.5rem;
+            color: var(--pan-white);
+            position: relative;
+            min-height: 200px;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+             display: block;
+            border-radius: 0;
+        }
+        
+        .project-image-placeholder {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 2px dashed rgba(255,255,255,0.3);
+            margin-bottom: 1rem;
+        }
+        
+        .project-image-placeholder i {
+            font-size: 3rem;
+            opacity: 0.7;
+            margin-bottom: 0.0rem;
+        }
+        
+        .project-image-placeholder span {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+        
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-body {
+            padding: 1.5rem;
+        }
+        
+        .project-tag {
+            background: var(--pan-gray);
+            color: var(--pan-blue);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.2rem;
+        }
+        
+
+
+/* codigo que agrefgue para cubrir los puntos de la imagen */
+
+        .project-image-placeholder img {
+    position: absolute;
+    top: -5px; /* 🔥 sube la imagen */
+    left: 0;
+
+    width: 100%;
+    height: calc(50% + 45px); /* 🔥 cubre puntos */
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+        /* Initiatives Section */
+        .initiatives-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--pan-blue-dark) 0%, var(--pan-blue) 100%);
+            color: var(--pan-white);
+        }
+        
+        .initiatives-section .section-title {
+            color: var(--pan-white);
+        }
+        
+        .initiative-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--pan-soft);
+            transition: all 0.3s ease;
+        }
+        
+        .initiative-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+        
+        .initiative-icon {
+            color: var(--pan-soft);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--pan-gray);
+        }
+        
+        .contact-card {
+            background: var(--pan-white);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 40, 85, 0.1);
+        }
+        
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--pan-blue) 0%, var(--pan-blue-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pan-white);
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--pan-blue-dark);
+            color: var(--pan-white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pan-white);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--pan-white);
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background: var(--pan-accent);
+            color: var(--pan-white);
+            transform: translateY(-5px);
+        }
+        
+        .pan-logo {
+            max-width: 120px;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-photo, .hero-photo-placeholder {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .hero-stats {
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 50px;
+                margin-right: 0;
+                text-align: left;
+                width: calc(100% - 60px);
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-photo, .hero-photo-placeholder {
+                width: 160px;
+                height: 160px;
+                font-size: 3rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                padding: 1rem 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-card {
+                margin-bottom: 1rem;
+            }
+            
+            .education-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-content {
+                padding: 1.5rem;
+            }
+            
+            .initiative-item {
+                padding: 1rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .footer {
+                padding: 40px 0 20px;
+            }
+            
+            .footer-logo {
+                font-size: 1.5rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
+            .hero-photo, .hero-photo-placeholder {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Particles effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: particleFloat 15s infinite;
+        }
+        
+        @keyframes particleFloat {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Counter animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+            display: inline-block;
+            transition: transform 0.1s ease;
+        }
+        
+        .counter-suffix {
+            font-size: 1.2rem;
+            vertical-align: super;
+            margin-left: 2px;
+            opacity: 0.9;
+        }
+        
+        @keyframes countPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="bi bi-bank2 me-2"></i>César Madrigal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: rgba(255,255,255,0.5);">
+                <i class="bi bi-list text-white fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#iniciativas">Iniciativas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="inicio">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center mb-5 mb-lg-0" data-aos="fade-right">
+                   <div class="hero-photo-container">
+
+                 <div class="hero-photo-placeholder">
+                   <img src="/imagenes/portadacongreso.jpeg" alt="Diputado Local">
+    </div>
+
+    <span class="hero-badge">
+        <i class="bi bi-patch-check-fill me-1"></i> Diputado Local
+    </span>
+
+</div>
+
+                </div>
+                <div class="col-lg-7 hero-content" data-aos="fade-left">
+                    <h1 class="hero-title">César Octavio<br>Madrigal Díaz</h1>
+                    <p class="hero-subtitle">
+                        <i class="bi bi-geo-alt-fill me-2"></i>Diputado Local | Distrito 8 Guadalajara
+                    </p>
+                    <p class="hero-description">
+                        Abogado y político mexicano, miembro del <strong>Partido Acción Nacional (PAN)</strong>, 
+                        con amplia trayectoria legislativa. Actualmente representa al Distrito 8 de Guadalajara 
+                        en el Congreso del Estado de Jalisco (2024-2027).
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="30" data-suffix="+">0</span>
+                            <span class="stat-label">Años de servicio</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="3" data-suffix="">0</span>
+                            <span class="stat-label">Legislaturas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="2" data-suffix="">0</span>
+                            <span class="stat-label">Maestrías</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#trayectoria" class="btn btn-lg px-4 py-2" style="background: var(--pan-white); color: var(--pan-blue); font-weight: 600; border-radius: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <i class="bi bi-arrow-down-circle me-2"></i>Conoce Mi Trayectoria
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('sobre-mi').scrollIntoView({behavior: 'smooth'})">
+            <i class="bi bi-chevron-double-down fs-3"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre-mi">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Sobre Mí</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Conoce más sobre mi compromiso con Jalisco</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <h4>Datos Personales</h4>
+                        <p class="text-muted">Nacido el 30 de enero de 1974 en Guadalajara, Jalisco, México. Abogado de profesión con vocación de servicio público.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="bi bi-flag"></i>
+                        </div>
+                        <h4>Partido Político</h4>
+                        <p class="text-muted">Militante del Partido Acción Nacional (PAN), comprometido con los valores de democracia, justicia y desarrollo social.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h4>Cargo Actual</h4>
+                        <p class="text-muted">Diputado Local del Congreso de Jalisco (2024-2027) por el Distrito 8 de Guadalajara. Secretario de Mesa Directiva.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h4>Compromiso</h4>
+                        <p class="text-muted">Defensor de los valores familiares, la transparencia gubernamental y el desarrollo urbano sostenible de Guadalajara.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section" id="formacion">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Formación Académica</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Preparación profesional al servicio de la ciudadanía</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <span class="education-year">1993 - 1997</span>
+                        <h4>Licenciatura en Derecho</h4>
+                        <p class="opacity-75">Formación jurídica integral que constituye la base de su carrera en el servicio público y la legislación.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="bi bi-journal-bookmark-fill"></i>
+                        </div>
+                        <span class="education-year">1998 - 2000</span>
+                        <h4>Maestría en Derecho Constitucional y Amparo</h4>
+                        <p class="opacity-75">Especialización en el marco jurídico constitucional mexicano y mecanismos de protección de derechos fundamentales.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                        </div>
+                        <span class="education-year">2000 - 2003</span>
+                        <h4>Maestría en Política y Gestión Pública</h4>
+                        <p class="opacity-75">Formación especializada en administración pública y diseño de políticas para el beneficio ciudadano.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Doctorado en curso -->
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="education-card p-4" style="background: rgba(0, 86, 184, 0.2); border: 2px solid var(--pan-accent);">
+                        <div class="doctorate-badge mb-3">
+                            <i class="bi bi-stars"></i>
+                            EN CURSO
+                        </div>
+                        <div class="education-icon mx-auto" style="background: var(--pan-white); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-book-fill" style="color: var(--pan-blue);"></i>
+                        </div>
+                        <h3 class="mt-3">Doctorado</h3>
+                        <p class="opacity-75 mb-0">Actualmente cursando estudios de doctorado, continuando su formación académica para servir mejor a la ciudadanía de Jalisco.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="trayectoria">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Trayectoria Política</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Más de 30 años de servicio público comprometido</p>
+            </div>
+            <div class="timeline">
+                <!-- Inicios -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1990s</span>
+                        <h4 class="timeline-title">Inicios en el PAN</h4>
+                        <p class="timeline-subtitle">Secretario de Capacitacion Estatal</p>
+                        <p class="text-muted">Comenzo su carrera politica en Accion Juvenil del PAN en Jalisco, destacando como Secretario de Capacitacion Estatal, donde formo a las nuevas generaciones del partido.</p>
+                        <!-- REEMPLAZAR: Agregar imagen de inicios en el PAN -->
+                        <div class="timeline-image-placeholder">
+                           <img src="/imagenes/integrantedelpan.jpeg" class="timeline-image">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diputado Local LVIII -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2000s</span>
+                        <h4 class="timeline-title">Diputado Local - LVIII Legislatura</h4>
+                        <p class="timeline-subtitle">Congreso del Estado de Jalisco</p>
+                        <p class="text-muted">Primera experiencia como legislador local, participando activamente en iniciativas estatales y comisiones legislativas para el desarrollo de Jalisco.</p>
+                        <!-- REEMPLAZAR: Agregar imagen de Diputado Local LVIII -->
+                        <div class="timeline-image-placeholder">
+                            <img src="/imagenes/gano.jpeg" class="timeline-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diputado Federal -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2009 - 2012</span>
+                        <h4 class="timeline-title">Diputado Federal</h4>
+                        <p class="timeline-subtitle">LXI Legislatura - Camara de Diputados</p>
+                        <p class="text-muted">Represento al Distrito 14 de Jalisco en la Camara de Diputados del Congreso de la Union. Participo en la reforma constitucional del articulo 4 para la proteccion de la vida.</p>
+                        <!-- REEMPLAZAR: Agregar imagen de Diputado Federal -->
+                        <div class="timeline-image-placeholder">
+                             <img src="/imagenes/protesta.jpeg" class="timeline-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Candidaturas -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2010s - 2020s</span>
+                        <h4 class="timeline-title">Aspirante a Cargos Ejecutivos</h4>
+                        <p class="timeline-subtitle">Procesos Internos del PAN</p>
+                        <p class="text-muted">Participo en procesos internos como aspirante a la Alcaldia de Guadalajara y a la Gubernatura de Jalisco, demostrando su compromiso con el servicio publico.</p>
+                        <!-- REEMPLAZAR: Agregar imagen de candidaturas -->
+                         <div class="timeline-image-placeholder">
+                         <img src="/imagenes/2018.jpeg" class="timeline-image">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diputado Local Actual -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" style="border: 2px solid var(--pan-accent);">
+                        <span class="timeline-year" style="background: var(--pan-accent); color: var(--pan-white);">2024 - 2027</span>
+                        <h4 class="timeline-title">Diputado Local - Legislatura Actual</h4>
+                        <p class="timeline-subtitle">Congreso del Estado de Jalisco - Distrito 8</p>
+                        <p class="text-muted">Actualmente representa al Distrito 8 de Guadalajara. Es Secretario de la Mesa Directiva y Presidente de la Comisión de Gobernación y Fortalecimiento Municipal.</p>
+                        <div class="mt-3">
+                            <span class="badge" style="background: var(--pan-blue);">Mesa Directiva</span>
+                            <span class="badge" style="background: var(--pan-accent); color: var(--pan-white);">Comision de Gobernacion</span>
+                        </div>
+                        <!-- REEMPLAZAR: Agregar imagen de Diputado Actual -->
+                        <div class="timeline-image-placeholder">
+                             <img src="/imagenes/2024.jpeg" class="timeline-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="proyectos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Proyectos Destacados</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Propuestas concretas para el desarrollo de Jalisco</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <!-- REEMPLAZAR: Agregar imagen del proyecto M-30 -->
+                            <div class="project-image-placeholder">
+                                 <img src="/imagenes/periodicom30.jpeg" class="timeline-image">
+                            </div>
+                            <!-- Descomentar y usar esta linea para agregar imagen real:
+                            <img src="/images/m30-tapatío.jpg" alt="Proyecto M-30 Tapatío" class="project-image"> -->
+                            <i class="bi bi-water project-icon"></i>
+                            <h4>M-30 Tapatío</h4>
+                        </div>
+                        <div class="project-body">
+                            <p class="text-muted">Proyecto de túneles subterráneos integrados con transporte público y sistema de captación de agua pluvial para solucionar problemas viales e hidráulicos de Guadalajara.</p>
+                            <div class="mt-3">
+                                <span class="project-tag">Infraestructura</span>
+                                <span class="project-tag">Movilidad</span>
+                                <span class="project-tag">Prevención</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-header" style="background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);">
+                            <!-- REEMPLAZAR: Agregar imagen del viaducto -->
+                            <div class="project-image-placeholder">
+                                <img src="/imagenes/m30.jpeg" class="timeline-image">
+                            </div>
+                            <i class="bi bi-cloud-rain-heavy project-icon"></i>
+                            <h4>Viaducto Subterráneo Pluvial</h4>
+                        </div>
+                        <div class="project-body">
+                            <p class="text-muted">Propuesta de viaducto subterráneo pluvial para la Avenida López Mateos, diseñado para prevenir inundaciones y mejorar el drenaje de la Zona Metropolitana.</p>
+                            <div class="mt-3">
+                                <span class="project-tag">Drenaje</span>
+                                <span class="project-tag">López Mateos</span>
+                                <span class="project-tag">ZMG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-header" style="background: linear-gradient(135deg, #1e8449 0%, #27ae60 100%);">
+                            <!-- REEMPLAZAR: Agregar imagen de las Casas del LACE -->
+                            <div class="project-image-placeholder">
+                                <img src="/imagenes/miting1.jpeg" class="timeline-image">
+                            </div>
+                            <i class="bi bi-house-heart project-icon"></i>
+                            <h4>Casas del LACE</h4>
+                        </div>
+                        <div class="project-body">
+                            <p class="text-muted">Proyecto de vivienda social impulsado para brindar opciones accesibles de hogar a familias jaliscienses, promoviendo el desarrollo comunitario y la estabilidad familiar.</p>
+                            <div class="mt-3">
+                                <span class="project-tag">Vivienda</span>
+                                <span class="project-tag">Social</span>
+                                <span class="project-tag">Familias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-header" style="background: linear-gradient(135deg, #7d3c98 0%, #9b59b6 100%);">
+                            <!-- REEMPLAZAR: Agregar imagen del Drenaje Profundo -->
+                            <div class="project-image-placeholder">
+                                <img src="/imagenes/drenajeprofundo.jpeg" class="timeline-image">
+                            </div>
+                            <i class="bi bi-shield-check project-icon"></i>
+                            <h4>Drenaje Profundo ZMG</h4>
+                        </div>
+                        <div class="project-body">
+                            <p class="text-muted">Impulso al proyecto de sistema de drenaje profundo para la Zona Metropolitana de Guadalajara, como medida estructural para la prevención de inundaciones.</p>
+                            <div class="mt-3">
+                                <span class="project-tag">Prevención</span>
+                                <span class="project-tag">Infraestructura</span>
+                                <span class="project-tag">Metropoli</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card">
+                        <div class="project-header" style="background: linear-gradient(135deg, #d35400 0%, #e67e22 100%);">
+                            <!-- REEMPLAZAR: Agregar imagen de Educación Tecnológica -->
+                            <div class="project-image-placeholder">
+                                <img src="/imagenes/empresarios.jpeg" class="timeline-image">
+                            </div>
+                            <i class="bi bi-laptop project-icon"></i>
+                            <h4>Educación Tecnológica</h4>
+                        </div>
+                        <div class="project-body">
+                            <p class="text-muted">Promoción de planes educativos con enfoque tecnológico, incluyendo ciberseguridad y mediación escolar en la educación pública del estado de Jalisco.</p>
+                            <div class="mt-3">
+                                <span class="project-tag">Educación</span>
+                                <span class="project-tag">Tecnología</span>
+                                <span class="project-tag">Ciberseguridad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card">
+                        <div class="project-header" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);">
+                            <!-- REEMPLAZAR: Agregar imagen del Parlamento -->
+                            <div class="project-image-placeholder">
+                                <img src="/imagenes/foro.jpeg" class="timeline-image">
+                            </div>
+                            <i class="bi bi-people project-icon"></i>
+                            <h4>Parlamento Abierto de la Familia</h4>
+                        </div>
+                        <div class="project-body">
+                            <p class="text-muted">Foro de diálogo ciudadano para enriquecer el derecho de familia en la legislación estatal, promoviendo valores de unidad, respeto y protección familiar.</p>
+                            <div class="mt-3">
+                                <span class="project-tag">Familia</span>
+                                <span class="project-tag">Participación</span>
+                                <span class="project-tag">Legislación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initiatives Section -->
+    <section class="initiatives-section" id="iniciativas">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Agenda Legislativa</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Ejes de trabajo y propuestas en el Congreso de Jalisco</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="initiative-item" data-aos="fade-right" data-aos-delay="100">
+                        <i class="bi bi-house-heart initiative-icon"></i>
+                        <div>
+                            <h5 class="mb-1">Protección a la Familia</h5>
+                            <p class="mb-0 opacity-75">Fortalecimiento de valores familiares, acceso a créditos de vivienda y creación de centros de orientación familiar.</p>
+                        </div>
+                    </div>
+                    <div class="initiative-item" data-aos="fade-right" data-aos-delay="200">
+                        <i class="bi bi-shield-lock initiative-icon"></i>
+                        <div>
+                            <h5 class="mb-1">Seguridad Pública</h5>
+                            <p class="mb-0 opacity-75">Propuestas para fortalecer la seguridad ciudadana y mejorar la coordinación entre niveles de gobierno.</p>
+                        </div>
+                    </div>
+                    <div class="initiative-item" data-aos="fade-right" data-aos-delay="300">
+                        <i class="bi bi-graph-up-arrow initiative-icon"></i>
+                        <div>
+                            <h5 class="mb-1">Economía y Empleo</h5>
+                            <p class="mb-0 opacity-75">Estímulos a emprendedores, fomento a la inversión y mayor competitividad regional para Jalisco.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="initiative-item" data-aos="fade-left" data-aos-delay="100">
+                        <i class="bi bi-eye initiative-icon"></i>
+                        <div>
+                            <h5 class="mb-1">Transparencia y Rendición de Cuentas</h5>
+                            <p class="mb-0 opacity-75">Promoción de gobierno abierto y mecanismos de fiscalización para el uso eficiente de recursos públicos.</p>
+                        </div>
+                    </div>
+                    <div class="initiative-item" data-aos="fade-left" data-aos-delay="200">
+                        <i class="bi bi-buildings initiative-icon"></i>
+                        <div>
+                            <h5 class="mb-1">Desarrollo Urbano</h5>
+                            <p class="mb-0 opacity-75">Infraestructura sostenible, mejora del transporte público y soluciones para problemas de inundaciones.</p>
+                        </div>
+                    </div>
+                    <div class="initiative-item" data-aos="fade-left" data-aos-delay="300">
+                        <i class="bi bi-heart-pulse initiative-icon"></i>
+                        <div>
+                            <h5 class="mb-1">Protección de la Vida</h5>
+                            <p class="mb-0 opacity-75">Defensa de los derechos humanos desde la concepción hasta la muerte natural, conforme al artículo 4° constitucional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Mantente en comunicación</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>Ubicación</h5>
+                        <p class="text-muted mb-0">Congreso del Estado de Jalisco<br>Guadalajara, Jalisco, México</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+                        <h5>Sitio Web</h5>
+                        <p class="text-muted mb-0">
+                            <a href="https://cesarmadrigal.mx" target="_blank" style="color: var(--pan-blue); text-decoration: none;">cesarmadrigal.mx</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h5>Congreso de Jalisco</h5>
+                        <p class="text-muted mb-0">
+                            <a href="https://www.congresojal.gob.mx" target="_blank" style="color: var(--pan-blue); text-decoration: none;">congresojal.gob.mx</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="footer-logo">
+                        <i class="bi bi-bank2 me-2" style="color: var(--pan-accent);"></i>César Madrigal
+                    </div>
+                    <p class="opacity-75 mb-0">Diputado Local por el Distrito 8<br>Guadalajara, Jalisco</p>
+                </div>
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/PAN_logo_%28Mexico%29.svg/200px-PAN_logo_%28Mexico%29.svg.png" alt="Logo PAN" class="pan-logo" onerror="this.style.display='none'">
+                    <p class="opacity-75 mb-0 mt-2">Partido Acción Nacional</p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="text-center">
+                <p class="mb-0 opacity-50">&copy; 2024 - 2027 César Octavio Madrigal Díaz. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('mainNavbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Counter animation with easing
+        const counters = document.querySelectorAll('.counter');
+        
+        // Easing function for smooth deceleration
+        function easeOutExpo(t) {
+            return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+        }
+        
+        function easeOutElastic(t) {
+            const c4 = (2 * Math.PI) / 3;
+            return t === 0 ? 0 : t === 1 ? 1 : Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * c4) + 1;
+        }
+        
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const duration = 2500; // 2.5 seconds
+            const startTime = performance.now();
+            
+            const updateCounter = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Use easeOutExpo for smooth deceleration effect
+                const easedProgress = easeOutExpo(progress);
+                const currentValue = Math.round(easedProgress * target);
+                
+                counter.innerHTML = currentValue + '<span class="counter-suffix">' + suffix + '</span>';
+                
+                // Add scale animation on each update
+                if (progress < 1) {
+                    const scale = 1 + (0.1 * Math.sin(progress * Math.PI * 8) * (1 - progress));
+                    counter.style.transform = `scale(${scale})`;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerHTML = target + '<span class="counter-suffix">' + suffix + '</span>';
+                    counter.style.transform = 'scale(1)';
+                    // Final pulse animation
+                    counter.style.transition = 'transform 0.3s ease';
+                    counter.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        counter.style.transform = 'scale(1)';
+                    }, 150);
+                }
+            };
+            
+            requestAnimationFrame(updateCounter);
+        };
+        
+        // Intersection Observer for counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Small delay for dramatic effect
+                    setTimeout(() => {
+                        animateCounter(entry.target);
+                    }, 200);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        counters.forEach(counter => counterObserver.observe(counter));
+        
+        // Create particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            particle.style.width = (5 + Math.random() * 10) + 'px';
+            particle.style.height = particle.style.width;
+            particlesContainer.appendChild(particle);
+        }
+        
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                    }
+                }
+            });
+        });
+        
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Typing effect for hero title (optional enhancement)
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            heroTitle.style.opacity = '1';
+        }
+    </script>
+</body>
+</html>
